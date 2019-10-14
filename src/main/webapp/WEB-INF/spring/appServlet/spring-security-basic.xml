@@ -1,0 +1,32 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+   <http auto-config="true" use-expressions="true" >
+		 <intercept-url pattern="/api/**" access="hasAnyRole('ROLE_STUDENT','ROLE_TEACHER','ROLE_HOD','ROLE_TPO','ROLE_PRINCIPAL','ROLE_DIRECTOR','ROLE_PARENT')" /> 
+        <intercept-url pattern="/web/**" access="hasAnyRole('ROLE_STUDENT','ROLE_ADMIN','ROLE_TPO','ROLE_SUPER_ADMIN','ROLE_TEACHER','ROLE_HOD','ROLE_IT','ROLE_PRINCIPAL','ROLE_DIRECTOR','ROLE_PARENT')" /> 
+        <intercept-url pattern="/**" access="permitAll" />
+        <intercept-url pattern="/user/*" access="permitAll" />
+         <intercept-url pattern="/user/login" access="permitAll" />
+        			                           
+        <form-login
+		    login-page="/login"
+		    authentication-failure-url="/login"
+			username-parameter="username"
+			password-parameter="password" />
+<!-- 		<logout invalidate-session="true" delete-cookies="true" logout-url="/logout"/>
+ -->	</http>
+    <authentication-manager>
+	  <authentication-provider>
+	  <password-encoder hash="sha-256"/>
+	    <jdbc-user-service data-source-ref="dataSource"
+		  users-by-username-query=
+		    "SELECT user_name username,USER_PWD password, true enabled FROM COM_USER_DTL WHERE user_name=?"
+		  authorities-by-username-query=
+		    "SELECT user_name username,role.ROLE_NAME role FROM COM_USER_ROLE role, COM_USER_DTL userdtl WHERE userdtl.COM_USER_ID =role.COM_USER_ID and userdtl.user_name=? " />
+	    </authentication-provider>
+	 </authentication-manager>
+</beans:beans>

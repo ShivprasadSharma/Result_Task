@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+ 
+ <definition name="base.definition" template="/WEB-INF/views/jsp/layouts/main.jsp">
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/views/jsp/templates/header.jsp"></put-attribute>
+        <put-attribute name="menu" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/views/jsp/templates/footer.jsp"></put-attribute>
+    </definition>
+ 
+ 
+  <definition extends="base.definition" name="admin.punchStudent">
+        <put-attribute name="title" value="Student Count"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/jsp/administration/punchStudent.jsp"></put-attribute>
+    </definition>
+  
+ 
+ 
+   <definition name="login" template="/WEB-INF/views/jsp/layouts/start.jsp">
+    <put-attribute name="title" value="Home" />
+  	<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/login.jsp" />
+  </definition>
+  
+  <definition name="user.getEmailId" template="/WEB-INF/views/jsp/layouts/start.jsp">
+    <put-attribute name="title" value="Forgotten password" />
+  	<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/forgotten.jsp" />
+  </definition>
+  
+  <definition name="user.setNewPass" template="/WEB-INF/views/jsp/layouts/start.jsp">
+    <put-attribute name="title" value="Confirm Authentication" />
+  	<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/newpwd.jsp" />
+  </definition>
+  
+    <definition name="user.register" template="/WEB-INF/views/jsp/layouts/start.jsp">
+    <put-attribute name="title" value="New User" />
+  	<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/register.jsp" />
+  </definition>
+  
+    <definition name="user.success" template="/WEB-INF/views/jsp/layouts/start.jsp">
+    <put-attribute name="title" value="sucess" />
+  	<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/success.jsp" />
+  </definition>
+  
+  <definition name="user.pageNotFound" template="/WEB-INF/views/jsp/layouts/start.jsp">
+    <put-attribute name="title" value="Page Not Found" />
+  	<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/errorpage.jsp" />
+  </definition>
+  
+  <definition name="admin.displaytimetable" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Institute" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/displaytimetable.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <definition name="admin.parentdetails" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Institute" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/menu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/parentDetails.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+ 
+  <definition name="admin.home" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Notice Board" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/noticeBrd.jsp" />
+   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <definition name="admin.group" template="/WEB-INF/views/jsp/layouts/main.jsp">
+     <put-attribute name="title" value="Group List" />
+     <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+     <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+     <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/groups.jsp" />
+     <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <definition name="admin.groupdetails" template="/WEB-INF/views/jsp/layouts/main1.jsp">
+     <put-attribute name="title" value="Groups Details" />
+     <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+     <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/groupdetails.jsp" />
+  </definition>
+  
+  <definition name="admin.masterlist" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Master" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/masterlist.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <!-- Master Form -->
+  <definition name="admin.masterForm" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/masterform.jsp" />
+  </definition>
+  
+  
+  
+  <!-- Master Details Form -->
+  <definition name="admin.masterDetailsForm" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/masterdetailsform.jsp" />
+  </definition>
+  
+  <!-- Master Details Tab -->
+   <definition name="admin.masterDetails" template="/WEB-INF/views/jsp/layouts/tab.jsp">
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/masterdetails.jsp" />
+  </definition>
+  
+   <!-- Notification List -->
+   <definition name="admin.noticelist" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Result" />
+   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" /> 
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/noticeBrd.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <!-- Calender -->
+   <definition name="admin.calender" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Calender" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/calender.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+   <!-- Attendance-->
+   <definition name="admin.addUser" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Users" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/adduser.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+    <!-- Upload Subject Excel File-->
+   <definition name="admin.subjectfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Upload File" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/uploadSubjectList.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+   
+   <!-- Upload Notice Excel File-->
+   <definition name="admin.noticefile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Upload File" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/uploadnoticefile.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+  
+  <!-- Past Notification -->
+  <definition name="admin.pastnotices" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Past Notices" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/pastnotice.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <!-- User List  Staff-->
+  <definition name="admin.userlist" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="User List" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/userlist.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  
+  <!-- Student List  -->
+  <definition name="admin.studentlist" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="User List" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" /> 
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/studentlist.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <definition name="admin.noticeForm" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Notice" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/noticeform.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+ 
+  </definition>
+  
+   <!-- Notification  -->
+   <definition name="admin.blankNoticeForm" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="New Notice" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/newNotice.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <!-- Update Notification  -->
+   <definition name="admin.updatenotice" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="New Notice" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/updatenotice.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <!-- User Profile Setting  -->
+   <definition name="user.UserProfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Profile Setting" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/profile.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+  </definition>
+  
+  <!-- User Chat -->
+   <definition name="user.chatBox" template="/WEB-INF/views/jsp/layouts/main1.jsp">
+      <put-attribute name="title" value="Chat Page" />
+      <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+      <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/chat.jsp" />
+   </definition>
+   
+   <!-- User Chat -->
+   <definition name="user.chat" template="/WEB-INF/views/jsp/layouts/main1.jsp">
+      <put-attribute name="title" value="Chat" />
+       <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+      <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/chat.jsp" />
+   </definition>
+   
+    <!-- Master Form -->
+    <definition name="admin.userForm" template="/WEB-INF/views/jsp/layouts/main.jsp">
+     <put-attribute name="title" value="newgroup" />
+	 <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	 <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+     <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/newuser.jsp" />
+     <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+     
+     
+    </definition>
+  
+	<!-- Master Form -->
+	<definition name="admin.groupNoticeForm" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/groupnotice.jsp" />
+	</definition>
+	
+	<!-- Master Form For Mentor-->
+	<definition name="admin.mentorNoticeForm" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentornotice.jsp" />
+	</definition>
+	  
+	  <!-- Add New Group Member -->
+	  <definition name="admin.addGroupMember" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/groupmember.jsp" />
+	  </definition>
+	  
+	  <!-- Add New Group Member -->
+	  <definition name="admin.addMentorMember" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentormember.jsp" />
+	  </definition>
+	  
+	  <!-- Edit Group Member -->
+	  <definition name="admin.editGroupInfo" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/editGroup.jsp" />
+	  </definition>
+	  
+	  
+	  <!-- Edit Group Member -->
+	  <definition name="admin.removeMember" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/removeMember.jsp" />
+	  </definition>
+	  
+	  
+	   <!-- Mentor Remove Student -->
+	  <definition name="admin.mentorstudentremove" template="/WEB-INF/views/jsp/layouts/popup.jsp">
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentorstudentremove.jsp" />
+	  </definition>
+	  
+	  <!--Student Attendance-->
+	   <definition name="student.attendance" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Attendance" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/attendancepage.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+	   <!--Take Student Attendance-->
+	    <definition name="student.takeAttendance" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Attendance" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/takeattendance.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+	   <!--Student Attendance-->
+	   <definition name="college.result" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Result" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/result.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+	   <!--  Courses Offered by Institute Model View for Mobile -->
+	   <definition name="user.courses" template="/WEB-INF/views/jsp/layouts/start.jsp">
+	   <put-attribute name="title" value="Courses" />
+  	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/templates/courses.jsp" />
+	   </definition>
+	   
+	   <!-- Placement Model View for Mobile -->
+	   <definition name="user.palcement" template="/WEB-INF/views/jsp/layouts/start.jsp">
+	   <put-attribute name="title" value="Placement" />
+  	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/palcementmodel.jsp" />
+	   </definition>
+	   
+	  <!--  About Us Model View for Mobile -->
+	   <definition name="user.aboutus" template="/WEB-INF/views/jsp/layouts/start.jsp">
+	   <put-attribute name="title" value="About Us" />
+  	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/aboutus.jsp" />
+	   </definition>
+	   
+	   <!-- Master Form -->
+	    <definition name="admin.mentorprofile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Mentor"/>
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentorprofile.jsp"/>
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/></definition>
+    
+     <!--Mentor Group list-->
+	   <definition name="admin.mentorgrplist" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Mentor" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentorgrouplist.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+    <!--Mentor profile list-->
+	   <definition name="admin.mentorlist" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Mentor" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentorlist.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+     <!--Mentor profile list-->
+	   <definition name="admin.mentorchatbox" template="/WEB-INF/views/jsp/layouts/main1.jsp">
+	     <put-attribute name="title" value="Groups Details" />
+	     <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	     <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/mentorchat.jsp" />
+	   </definition>
+	   
+	    <!--View menter profile-->
+	   <definition name="admin.MenterProfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Profile" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/MenterProfile.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+	   <!-- staff profile-->
+	   <definition name="admin.staffprofile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   	 <put-attribute name="title" value="New Notice" />
+	   	 <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	   	 <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	  	 <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/staffProfile.jsp" />
+	   	 <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	  	</definition>
+	   
+	   <!-- Admin Form-->
+	   <definition name="admin.Admindetails" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="AdminForm"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Admindetails.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   	<!-- Student profile update page -->
+	   <definition name="admin.StudentProfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="update student profile"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Studentform.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   	<!-- Student profile update page -->
+	   <definition name="admin.updateStaffProfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="update Staff profile"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/StaffUpdateForm.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   <!--Time Table-->
+	   <definition name="admin.timetable" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	     <put-attribute name="title" value="Time Table"/>
+	     <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	     <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	     <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/timetable.jsp"/>
+	     <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>	  
+
+ 	<!--ADD subjects-->
+	   <definition name="admin.Add_Subject" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="ADD_Subject" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Add_Subject.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+	  <!--Assign Subject subjects-->
+	    <definition name="admin.SubjectAssign" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="Assign subject to Teacher"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/AssignSubject.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	     <!--Assign practical Batch-->
+	    <definition name="admin.assignpractical" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="Assign practical"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/AssignPractical.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   <!-- Feedback Year -->
+	   <definition name="admin.FeedbackYear" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="SelectYear"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/FeedbackYear.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	    <!-- Feedback que excel -->
+	   <definition name="admin.feedbackquefile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="uploadfeedbackque"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/uploadFeedbackQue.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   <!-- Feedback list by dept -->
+	   <definition name="admin.Feedback" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="feedbacklist"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/FeedbackList.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   <!--Feedback Display profile  -->
+	   <definition name="admin.FeedbackProfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="feedback"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/FeedbackProfile.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+
+ <!--Feedback Display chart profile  -->
+	   <definition name="admin.FeedbackChart" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="feedbackprofile"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/FeedbackChart.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	    
+	   <!--verify student profile  -->
+	   <definition name="admin.StudentVerification" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	   <put-attribute name="title" value="verification"/>
+	   <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp"/>
+	   <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp"/>
+	   <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/StudentVerification.jsp"/>
+	   <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp"/>
+	   </definition>
+	   
+	   
+	    <!--  create Grievance Committee-->
+  <definition name="admin.createGrievanceCommittee" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Create Grievance Committee " />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/create_Grievance_Committee.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+      
+      <!--  get Grievance Committee members list-->
+  <definition name="admin.GCMemberList" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value=" Grievance Committee Members List" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/grievance_Committee_Members.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+   
+  <!--  get Grievance  list-->
+  <definition name="admin.grievanceList" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value=" Grievance  List" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/grievanceList.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+   
+   
+   
+   <!--  downloadGrievance-->
+  <definition name="admin.downloadGrievance" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Downlod Grievance" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/downloadGrievance.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+   
+   <!--  get poll page-->
+  <definition name="admin.polls" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="polls" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Polls.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+   
+     <!--    daily Attendance page-->
+  <definition name="admin.dailyAttendance" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Attendance" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/dailyAttendance.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+   
+      <!--    daily Attendance Display-->
+  <definition name="admin.dailyAttendanceDisplay" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Attendance" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/dailyAttendanceDisplay.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+   
+    <!--    daily Attendance Report Download-->
+  <definition name="admin.dailyAttendanceReport" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Attendance" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/dailyAttendanceReport.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+  
+    <!-- Fee  Details form -->
+  <definition name="admin.getfeedetails" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="FeeDetails" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Fee_Details.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>	
+ 
+ 
+  <definition name="admin.getfeedetails1" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="FeeDetails" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Fee_Details1.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+   
+   <!-- Fee punch form -->
+  <definition name="admin.punchStudent" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Student Count" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/punchStudent.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+   <!-- student fee-->
+   <definition name="admin.StudentFeeDetail" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Student Count" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/StudentFeeDetail.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+      <!-- helps -->
+  <definition extends="base.definition" name="admin.helps">
+        <put-attribute name="title" value="Helps"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/jsp/administration/helps.jsp"></put-attribute>
+    </definition>
+    
+    <!-- punch -->
+    <definition extends="base.definition" name="admin.punch">
+        <put-attribute name="title" value="punch"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/jsp/administration/punch.jsp"></put-attribute>
+    </definition>
+    
+    <!--add institute  -->
+     <definition extends="base.definition" name="admin.instituteinfo">
+        <put-attribute name="title" value="instituteinfo"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/jsp/administration/Add_Institute_info.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="admin.resultpdf" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Uploading" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/resultpdf.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	   
+	     
+	   <definition name="admin.resultStaffpage" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Uploading" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/resultStaffpage.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	         
+	   <definition name="admin.ResultSubject" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Uploading" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/ResultSubject.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+    <definition name="admin.editStudentEducationalDtl" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Profile" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/educationInfo.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	</definition>
+    
+    
+  <definition name="admin.getdownload" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Student Count" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/getdownload.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition> 
+   
+      
+  <definition name="admin.studentdtl" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="Student Count" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/studentdtl.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition> 
+   
+    <definition name="admin.studentcountpage" template="/WEB-INF/views/jsp/layouts/main.jsp">
+    <put-attribute name="title" value="studentcount" />
+    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/studentcountpage.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+   </definition>
+   
+   
+    <definition name="admin.MentorStaffProfile" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="mentorlist" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/MentorStaffProfile.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	
+    <definition name="admin.Instituteresult" template="/WEB-INF/views/jsp/layouts/main.jsp">
+	    <put-attribute name="title" value="Result" />
+	    <put-attribute name="header" type="template" value="/WEB-INF/views/jsp/templates/header.jsp" />
+	    <put-attribute name="menu" type="template" value="/WEB-INF/views/jsp/templates/adminmenu.jsp" />
+	    <put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Instituteresult.jsp" />
+	    <put-attribute name="footer" type="template" value="/WEB-INF/views/jsp/templates/footer.jsp" />
+	   </definition>
+	      
+	 
+	   
+    <!-- ......................................TPO.................................... -->
+    
+    <definition extends="base.definition" name="admin.gfmcoordinator">
+    	<put-attribute name="title" value="Assigncoordinator"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/CoordinatorList.jsp"/>
+  </definition>
+  
+    <definition extends="base.definition" name="admin.dpttoplist">
+    	<put-attribute name="title" value="coordinatorlist"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TpoCordinatorList.jsp"/>
+  </definition>
+  
+  <definition extends="base.definition" name="admin.tpohome">
+    	<put-attribute name="title" value="home"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_home_page.jsp"/>
+  </definition>
+  
+   <definition extends="base.definition" name="admin.pastcompny">
+    	<put-attribute name="title" value="List"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TpoPastCompnylist.jsp"/>
+  </definition>
+  <definition extends="base.definition" name="admin.compydtl">
+    	<put-attribute name="title" value="Profile"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_Company_Profile.jsp"/>
+  </definition>
+  
+  <definition extends="base.definition" name="admin.tpostudlist">
+    	<put-attribute name="title" value="StudentList"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_Student_Filter_Form.jsp"/>
+  </definition>
+    
+    <definition extends="base.definition" name="admin.filterstud">
+    	<put-attribute name="title" value="StudentList"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_Filter_Stud_list.jsp"/>
+  </definition>
+  
+    <definition extends="base.definition" name="admin.applystud">
+    	<put-attribute name="title" value="StudentList"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_Applyed_Student_List.jsp"/>
+  </definition>
+    
+      <definition extends="base.definition" name="admin.placedstud">
+    	<put-attribute name="title" value="StudentList"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_Placed_Studlist.jsp"/>
+  </definition>
+  
+  	  <definition extends="base.definition" name="admin.offcampusstud">
+    	<put-attribute name="title" value="ADD"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/TPO_Add_OffcampusStud.jsp"/>
+  </definition>
+  
+  <definition extends="base.definition" name="admin.passOutBacklogStudent">
+    	<put-attribute name="title" value="pass out"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/passOutBacklogStudent.jsp"/>
+  </definition>
+  
+    <definition extends="base.definition" name="admin.examdashboard">
+    	<put-attribute name="title" value="StaffMenu"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/EXAM_Dashboard.jsp"/>
+  </definition>
+  
+  <definition extends="base.definition" name="admin.ParentProfile">
+    	<put-attribute name="title" value="ParentProfile"/>
+   		<put-attribute name="body" type="template" value="/WEB-INF/views/jsp/administration/Parentdtlform.jsp"/>
+  </definition>
+  
+</tiles-definitions>
