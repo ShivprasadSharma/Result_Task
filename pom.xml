@@ -20,7 +20,7 @@
 		<dbcp.version>1.4</dbcp.version>
 		<gcm.version>1.0.2</gcm.version>
 		<tiles.version>3.0.1</tiles.version>
-		<org.springframework-security>3.2.3.RELEASE</org.springframework-security>
+		<org.springframework-security>5.2.10.RELEASE</org.springframework-security>
 	</properties>
 	<dependencies>
 	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
